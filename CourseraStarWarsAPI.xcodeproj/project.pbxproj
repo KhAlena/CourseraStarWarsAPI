@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		F73598DC2451E65A0059F441 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73598DB2451E65A0059F441 /* AppDelegate.swift */; };
 		F73598DE2451E65A0059F441 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73598DD2451E65A0059F441 /* SceneDelegate.swift */; };
-		F73598E02451E65A0059F441 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73598DF2451E65A0059F441 /* ViewController.swift */; };
 		F73598E32451E65A0059F441 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73598E12451E65A0059F441 /* Main.storyboard */; };
 		F73598E52451E65B0059F441 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F73598E42451E65B0059F441 /* Assets.xcassets */; };
 		F73598E82451E65B0059F441 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73598E62451E65B0059F441 /* LaunchScreen.storyboard */; };
 		F73598F32451E65C0059F441 /* CourseraStarWarsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73598F22451E65C0059F441 /* CourseraStarWarsAPITests.swift */; };
 		F73598FE2451E65C0059F441 /* CourseraStarWarsAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73598FD2451E65C0059F441 /* CourseraStarWarsAPIUITests.swift */; };
+		F735990F2451E7560059F441 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F735990E2451E7560059F441 /* MainVC.swift */; };
+		F73599112451ED4F0059F441 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73599102451ED4F0059F441 /* Character.swift */; };
+		F73599142451EF950059F441 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73599132451EF950059F441 /* CharacterCell.swift */; };
+		F73599172451EFC20059F441 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73599162451EFC20059F441 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,6 @@
 		F73598D82451E65A0059F441 /* CourseraStarWarsAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourseraStarWarsAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73598DB2451E65A0059F441 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F73598DD2451E65A0059F441 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F73598DF2451E65A0059F441 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F73598E22451E65A0059F441 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F73598E42451E65B0059F441 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F73598E72451E65B0059F441 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		F73598F92451E65C0059F441 /* CourseraStarWarsAPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CourseraStarWarsAPIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73598FD2451E65C0059F441 /* CourseraStarWarsAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseraStarWarsAPIUITests.swift; sourceTree = "<group>"; };
 		F73598FF2451E65C0059F441 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F735990E2451E7560059F441 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		F73599102451ED4F0059F441 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		F73599132451EF950059F441 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		F73599162451EFC20059F441 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,12 @@
 		F73598DA2451E65A0059F441 /* CourseraStarWarsAPI */ = {
 			isa = PBXGroup;
 			children = (
+				F73599152451EFAD0059F441 /* Service */,
+				F73599122451EF7A0059F441 /* View */,
+				F735990D2451E7420059F441 /* Controller */,
+				F735990B2451E7120059F441 /* Model */,
 				F73598DB2451E65A0059F441 /* AppDelegate.swift */,
 				F73598DD2451E65A0059F441 /* SceneDelegate.swift */,
-				F73598DF2451E65A0059F441 /* ViewController.swift */,
 				F73598E12451E65A0059F441 /* Main.storyboard */,
 				F73598E42451E65B0059F441 /* Assets.xcassets */,
 				F73598E62451E65B0059F441 /* LaunchScreen.storyboard */,
@@ -126,6 +135,38 @@
 				F73598FF2451E65C0059F441 /* Info.plist */,
 			);
 			path = CourseraStarWarsAPIUITests;
+			sourceTree = "<group>";
+		};
+		F735990B2451E7120059F441 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F73599102451ED4F0059F441 /* Character.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F735990D2451E7420059F441 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F735990E2451E7560059F441 /* MainVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F73599122451EF7A0059F441 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F73599132451EF950059F441 /* CharacterCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F73599152451EFAD0059F441 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F73599162451EFC20059F441 /* NetworkService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +300,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F73598E02451E65A0059F441 /* ViewController.swift in Sources */,
+				F73599142451EF950059F441 /* CharacterCell.swift in Sources */,
 				F73598DC2451E65A0059F441 /* AppDelegate.swift in Sources */,
+				F735990F2451E7560059F441 /* MainVC.swift in Sources */,
 				F73598DE2451E65A0059F441 /* SceneDelegate.swift in Sources */,
+				F73599172451EFC20059F441 /* NetworkService.swift in Sources */,
+				F73599112451ED4F0059F441 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
