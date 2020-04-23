@@ -13,21 +13,37 @@ class MainVC: UIViewController {
     @IBOutlet weak var characterTable: UITableView!
     
     var people = Array<Character>()
+    var nextUrl: String?
+    let URL_BASE = "http://swapi.dev/api"
+    let URL_PEOPLE = "/people"
     
-    func getCharacters() {
-        NetworkService.shared.getCharacters(onSuccess: { (people) in
-            self.people = people.results
-            self.characterTable.reloadData()
-        }) { (errormessage) in
-            print(errormessage)
-            }
+    func getCharacters(_ url: String) {
+        DispatchQueue.main.async {
+            NetworkService.shared.getCharacters(APIurl: url, onSuccess: { (people) in
+                self.people.append(contentsOf: people.results)
+                if people.next != nil {
+                    self.nextUrl = people.next!
+                    self.getCharacters(self.nextUrl!)
+                    }
+                self.characterTable.reloadData()
+                
+            }) { (errormessage) in
+                print(errormessage)
+                }
+            
+        }
+        
     }
+    
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
         characterTable.dataSource = self
         characterTable.delegate = self
-        getCharacters()
+        getCharacters("\(URL_BASE)\(URL_PEOPLE)")
+        
+        //getUpdateCharacters()
         
     }
 }

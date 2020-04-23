@@ -11,14 +11,12 @@ import Foundation
 class NetworkService {
     static let shared = NetworkService()
     
-    let URL_BASE = "http://swapi.dev/api"
-    let URL_PEOPLE = "/people"
     
     
     
     let session = URLSession(configuration: .default)
-    func getCharacters(onSuccess: @escaping (People) -> Void, onError: @escaping (String) -> Void) {
-        let url = URL(string: "\(URL_BASE)\(URL_PEOPLE)")!
+    func getCharacters(APIurl: String, onSuccess: @escaping (People) -> Void, onError: @escaping (String) -> Void) {
+        let url = URL(string: APIurl)!
         let task = session.dataTask(with: url) {(data, response, error) in
             DispatchQueue.main.async {
                 if let error = error {
