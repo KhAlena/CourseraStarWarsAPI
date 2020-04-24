@@ -18,11 +18,10 @@ class MainVC: UIViewController {
     let URL_PEOPLE = "/people"
     
     func getCharacters(_ url: String) {
-        DispatchQueue.main.async {
-            NetworkService.shared.getCharacters(APIurl: url, onSuccess: { (people) in
-                self.people.append(contentsOf: people.results)
-                if people.next != nil {
-                    self.nextUrl = people.next!
+            NetworkService.shared.getData(APIurl: url, modelType: "people", onSuccess: { (people)  in
+                self.people.append(contentsOf: (people as! People).results)
+                if (people as! People).next != nil {
+                    self.nextUrl = (people as! People).next!
                     self.getCharacters(self.nextUrl!)
                     }
                 self.characterTable.reloadData()
@@ -30,9 +29,6 @@ class MainVC: UIViewController {
             }) { (errormessage) in
                 print(errormessage)
                 }
-            
-        }
-        
     }
     
    
@@ -42,6 +38,7 @@ class MainVC: UIViewController {
         characterTable.dataSource = self
         characterTable.delegate = self
         getCharacters("\(URL_BASE)\(URL_PEOPLE)")
+        
         
         
         
@@ -63,6 +60,9 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterCell") as? CharacterCell {
             cell.updateCell(character: people[indexPath.row])
+            let backgroundView = UIView()
+            backgroundView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.1205586473)
+            cell.selectedBackgroundView = backgroundView
             return cell
         }
         return UITableViewCell()
@@ -80,7 +80,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let characterVC = segue.destination as? CharacterVC {
             assert(sender as? Character != nil)
-            characterVC.initCharacter(character: sender as! Character)
+            characterVC.character = sender as? Character
         }
     }
     

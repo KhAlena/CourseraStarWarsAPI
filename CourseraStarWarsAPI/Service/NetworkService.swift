@@ -14,8 +14,10 @@ class NetworkService {
     
     
     
+    
     let session = URLSession(configuration: .default)
-    func getCharacters(APIurl: String, onSuccess: @escaping (People) -> Void, onError: @escaping (String) -> Void) {
+    func getData(APIurl: String, modelType: String, onSuccess: @escaping (Any) -> Void, onError: @escaping (String) -> Void)  {
+        
         let url = URL(string: APIurl)!
         let task = session.dataTask(with: url) {(data, response, error) in
             DispatchQueue.main.async {
@@ -29,8 +31,18 @@ class NetworkService {
                 }
                 do {
                     if response.statusCode == 200 {
-                        let people = try JSONDecoder().decode(People.self, from: data)
-                        onSuccess(people)
+                        switch modelType {
+                        case "people":
+                            let data = try JSONDecoder().decode(People.self, from: data)
+                            onSuccess(data)
+                        case "planet":
+                            let data = try JSONDecoder().decode(Planet.self, from: data)
+                            onSuccess(data)
+                        default:
+                            let data = try JSONDecoder().decode(People.self, from: data)
+                            onSuccess(data)
+                        }
+                        
                     } else {
                         onError("Status code of server \(response.statusCode)")
                     } }

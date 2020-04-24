@@ -19,6 +19,8 @@
 		F73599142451EF950059F441 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73599132451EF950059F441 /* CharacterCell.swift */; };
 		F73599172451EFC20059F441 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73599162451EFC20059F441 /* NetworkService.swift */; };
 		F7359919245244530059F441 /* CharacterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7359918245244530059F441 /* CharacterVC.swift */; };
+		F7CF38182452FAEE00C68A2D /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF38172452FAEE00C68A2D /* Planet.swift */; };
+		F7CF381A2453221200C68A2D /* PlanetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF38192453221200C68A2D /* PlanetVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		F73599132451EF950059F441 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		F73599162451EFC20059F441 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F7359918245244530059F441 /* CharacterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterVC.swift; sourceTree = "<group>"; };
+		F7CF38172452FAEE00C68A2D /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		F7CF38192453221200C68A2D /* PlanetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				F73599102451ED4F0059F441 /* Character.swift */,
+				F7CF38172452FAEE00C68A2D /* Planet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 			children = (
 				F735990E2451E7560059F441 /* MainVC.swift */,
 				F7359918245244530059F441 /* CharacterVC.swift */,
+				F7CF38192453221200C68A2D /* PlanetVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -306,9 +312,11 @@
 				F73599142451EF950059F441 /* CharacterCell.swift in Sources */,
 				F7359919245244530059F441 /* CharacterVC.swift in Sources */,
 				F73598DC2451E65A0059F441 /* AppDelegate.swift in Sources */,
+				F7CF38182452FAEE00C68A2D /* Planet.swift in Sources */,
 				F735990F2451E7560059F441 /* MainVC.swift in Sources */,
 				F73598DE2451E65A0059F441 /* SceneDelegate.swift in Sources */,
 				F73599172451EFC20059F441 /* NetworkService.swift in Sources */,
+				F7CF381A2453221200C68A2D /* PlanetVC.swift in Sources */,
 				F73599112451ED4F0059F441 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
