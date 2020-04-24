@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-safari-background" translatesAutoresizingMaskIntoConstraints="NO" id="rc6-al-sYo">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-safari-background" translatesAutoresizingMaskIntoConstraints="NO" id="rc6-al-sYo">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME TO STARWARS WORLD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgy-8w-3tF">
@@ -93,11 +93,54 @@ Planets, Spaceships, Vehicles, People, Films and Species</string>
                     </view>
                     <connections>
                         <outlet property="characterTable" destination="KAy-3J-YWH" id="EGn-l1-zIe"/>
+                        <segue destination="wca-XE-AbI" kind="show" identifier="CharacterVC" id="euP-el-OLz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--CharacterVC-->
+        <scene sceneID="MZz-mt-hoT">
+            <objects>
+                <viewController id="wca-XE-AbI" customClass="CharacterVC" customModule="CourseraStarWarsAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eIy-Dw-p7y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-safari-background" translatesAutoresizingMaskIntoConstraints="NO" id="Arl-f7-4EL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anakin Skywalker" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKo-g7-qj7">
+                                <rect key="frame" x="20" y="50" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xUy-2D-Iht"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Arl-f7-4EL" secondAttribute="bottom" id="6xr-g6-zWH"/>
+                            <constraint firstItem="Arl-f7-4EL" firstAttribute="leading" secondItem="eIy-Dw-p7y" secondAttribute="leading" id="Adz-1K-wFD"/>
+                            <constraint firstItem="hKo-g7-qj7" firstAttribute="leading" secondItem="bBe-yH-bnj" secondAttribute="leading" constant="20" id="DXL-9v-mm6"/>
+                            <constraint firstItem="Arl-f7-4EL" firstAttribute="trailing" secondItem="bBe-yH-bnj" secondAttribute="trailing" id="FOE-GC-YWK"/>
+                            <constraint firstItem="Arl-f7-4EL" firstAttribute="top" secondItem="bBe-yH-bnj" secondAttribute="top" id="dwY-oS-Kr7"/>
+                            <constraint firstItem="hKo-g7-qj7" firstAttribute="top" secondItem="bBe-yH-bnj" secondAttribute="top" constant="50" id="nPi-6u-XGR"/>
+                            <constraint firstItem="bBe-yH-bnj" firstAttribute="trailing" secondItem="hKo-g7-qj7" secondAttribute="trailing" constant="20" id="uYd-ah-Bxy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bBe-yH-bnj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Odj-uR-TPE"/>
+                    <connections>
+                        <outlet property="nameCharacterLbl" destination="hKo-g7-qj7" id="jeK-6T-747"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sra-8j-myF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="901" y="138"/>
         </scene>
     </scenes>
     <resources>

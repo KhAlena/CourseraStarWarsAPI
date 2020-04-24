@@ -43,7 +43,7 @@ class MainVC: UIViewController {
         characterTable.delegate = self
         getCharacters("\(URL_BASE)\(URL_PEOPLE)")
         
-        //getUpdateCharacters()
+        
         
     }
 }
@@ -70,6 +70,18 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let character = people[indexPath.row]
+        performSegue(withIdentifier: "CharacterVC", sender: character)
+    }
+     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let characterVC = segue.destination as? CharacterVC {
+            assert(sender as? Character != nil)
+            characterVC.initCharacter(character: sender as! Character)
+        }
     }
     
     
