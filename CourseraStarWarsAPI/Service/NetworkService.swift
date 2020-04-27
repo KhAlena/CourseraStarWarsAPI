@@ -11,10 +11,6 @@ import Foundation
 class NetworkService {
     static let shared = NetworkService()
     
-    
-    
-    
-    
     let session = URLSession(configuration: .default)
     func getData(APIurl: String, modelType: String, onSuccess: @escaping (Any) -> Void, onError: @escaping (String) -> Void)  {
         
@@ -33,14 +29,25 @@ class NetworkService {
                     if response.statusCode == 200 {
                         switch modelType {
                         case "people":
-                            let data = try JSONDecoder().decode(People.self, from: data)
+                            let data = try JSONDecoder().decode(DataCharacter.self, from: data)
                             onSuccess(data)
-                        case "planet":
-                            let data = try JSONDecoder().decode(Planet.self, from: data)
+                        case "planets":
+                            let data = try JSONDecoder().decode(DataPlanets.self, from: data)
+                            onSuccess(data)
+                        case "films":
+                            let data = try JSONDecoder().decode(DataFilms.self, from: data)
+                            onSuccess(data)
+                        case "species":
+                            let data = try JSONDecoder().decode(DataSpecies.self, from: data)
+                            onSuccess(data)
+                        case "vehicles":
+                            let data = try JSONDecoder().decode(DataVehicles.self, from: data)
+                            onSuccess(data)
+                        case "starships":
+                            let data = try JSONDecoder().decode(DataStarships.self, from: data)
                             onSuccess(data)
                         default:
-                            let data = try JSONDecoder().decode(People.self, from: data)
-                            onSuccess(data)
+                            return
                         }
                         
                     } else {

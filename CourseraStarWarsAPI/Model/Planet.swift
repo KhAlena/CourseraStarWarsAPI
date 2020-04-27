@@ -23,3 +23,10 @@ struct Planet: Codable {
     let edited: String
     let url: String
 }
+
+struct DataPlanets: Codable {
+    let count: Int
+    var next: String?
+    let previous: String?
+    var results: Array<Planet>
+}

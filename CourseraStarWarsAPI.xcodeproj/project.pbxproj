@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F72FFBA5245612C500B98386 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72FFBA4245612C500B98386 /* Vehicle.swift */; };
+		F72FFBA7245613B400B98386 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72FFBA6245613B400B98386 /* Starship.swift */; };
+		F72FFBA92456201200B98386 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72FFBA82456201200B98386 /* Species.swift */; };
 		F73598DC2451E65A0059F441 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73598DB2451E65A0059F441 /* AppDelegate.swift */; };
 		F73598DE2451E65A0059F441 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73598DD2451E65A0059F441 /* SceneDelegate.swift */; };
 		F73598E32451E65A0059F441 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73598E12451E65A0059F441 /* Main.storyboard */; };
@@ -19,8 +22,10 @@
 		F73599142451EF950059F441 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73599132451EF950059F441 /* CharacterCell.swift */; };
 		F73599172451EFC20059F441 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73599162451EFC20059F441 /* NetworkService.swift */; };
 		F7359919245244530059F441 /* CharacterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7359918245244530059F441 /* CharacterVC.swift */; };
+		F7ACD36724571A9A0036C233 /* AllPlanetsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ACD36624571A9A0036C233 /* AllPlanetsVC.swift */; };
 		F7CF38182452FAEE00C68A2D /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF38172452FAEE00C68A2D /* Planet.swift */; };
 		F7CF381A2453221200C68A2D /* PlanetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF38192453221200C68A2D /* PlanetVC.swift */; };
+		F7CF381D245347C400C68A2D /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF381C245347C400C68A2D /* Film.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F72FFBA4245612C500B98386 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		F72FFBA6245613B400B98386 /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		F72FFBA82456201200B98386 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
 		F73598D82451E65A0059F441 /* CourseraStarWarsAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourseraStarWarsAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73598DB2451E65A0059F441 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F73598DD2451E65A0059F441 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,8 +67,10 @@
 		F73599132451EF950059F441 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		F73599162451EFC20059F441 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F7359918245244530059F441 /* CharacterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterVC.swift; sourceTree = "<group>"; };
+		F7ACD36624571A9A0036C233 /* AllPlanetsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPlanetsVC.swift; sourceTree = "<group>"; };
 		F7CF38172452FAEE00C68A2D /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		F7CF38192453221200C68A2D /* PlanetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetVC.swift; sourceTree = "<group>"; };
+		F7CF381C245347C400C68A2D /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +158,10 @@
 			children = (
 				F73599102451ED4F0059F441 /* Character.swift */,
 				F7CF38172452FAEE00C68A2D /* Planet.swift */,
+				F7CF381C245347C400C68A2D /* Film.swift */,
+				F72FFBA4245612C500B98386 /* Vehicle.swift */,
+				F72FFBA6245613B400B98386 /* Starship.swift */,
+				F72FFBA82456201200B98386 /* Species.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -158,6 +172,7 @@
 				F735990E2451E7560059F441 /* MainVC.swift */,
 				F7359918245244530059F441 /* CharacterVC.swift */,
 				F7CF38192453221200C68A2D /* PlanetVC.swift */,
+				F7ACD36624571A9A0036C233 /* AllPlanetsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -309,11 +324,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F72FFBA5245612C500B98386 /* Vehicle.swift in Sources */,
 				F73599142451EF950059F441 /* CharacterCell.swift in Sources */,
+				F72FFBA7245613B400B98386 /* Starship.swift in Sources */,
 				F7359919245244530059F441 /* CharacterVC.swift in Sources */,
 				F73598DC2451E65A0059F441 /* AppDelegate.swift in Sources */,
 				F7CF38182452FAEE00C68A2D /* Planet.swift in Sources */,
+				F72FFBA92456201200B98386 /* Species.swift in Sources */,
 				F735990F2451E7560059F441 /* MainVC.swift in Sources */,
+				F7ACD36724571A9A0036C233 /* AllPlanetsVC.swift in Sources */,
+				F7CF381D245347C400C68A2D /* Film.swift in Sources */,
 				F73598DE2451E65A0059F441 /* SceneDelegate.swift in Sources */,
 				F73599172451EFC20059F441 /* NetworkService.swift in Sources */,
 				F7CF381A2453221200C68A2D /* PlanetVC.swift in Sources */,
@@ -490,6 +510,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CourseraStarWarsAPI/CourseraStarWarsAPI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35FXA3YH32;
 				INFOPLIST_FILE = CourseraStarWarsAPI/Info.plist;
@@ -499,6 +520,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Alena.CourseraStarWarsAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -508,6 +530,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CourseraStarWarsAPI/CourseraStarWarsAPI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35FXA3YH32;
 				INFOPLIST_FILE = CourseraStarWarsAPI/Info.plist;
@@ -517,6 +540,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Alena.CourseraStarWarsAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -11,7 +11,6 @@ import UIKit
 class PlanetVC: UIViewController {
     
     @IBOutlet weak var titleLbl: UILabel!
-    @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var rotationLbl: UILabel!
     @IBOutlet weak var orbitalLbl: UILabel!
     @IBOutlet weak var diameterLbl: UILabel!
@@ -28,11 +27,13 @@ class PlanetVC: UIViewController {
     
     
     var planetInfo: Planet!
+    var filmDict: [String:Film] = [:]
+    var filmTitles : [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        filmTitles = planetInfo.films.map {  filmDict[$0]!.title }
         titleLbl.text = planetInfo.name.uppercased()
-        nameLbl.text = planetInfo.name
         rotationLbl.text = planetInfo.rotation_period
         orbitalLbl.text = planetInfo.orbital_period
         diameterLbl.text = planetInfo.diameter
@@ -41,11 +42,11 @@ class PlanetVC: UIViewController {
         terrainLbl.text = planetInfo.terrain
         waterLbl.text = planetInfo.surface_water
         populationLbl.text = planetInfo.population
-        filmsLbl.text = "soon"
+        filmsLbl.text = filmTitles.joined(separator: "\n")
         createdLbl.text = planetInfo.created
         editedLbl.text = planetInfo.edited
         urlLbl.text = planetInfo.url
-
+        
     }
     
 

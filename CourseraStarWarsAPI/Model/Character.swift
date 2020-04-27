@@ -18,7 +18,7 @@ struct Character: Codable {
     let birth_year: String
     let gender: String
     let homeworld: String
-    let films: Array<String>
+    var films: Array<String>
     let species: Array<String>
     let vehicles: Array<String>
     let starships: Array<String>
@@ -27,10 +27,10 @@ struct Character: Codable {
     let url: String
 }
 
-
-struct People: Codable {
+struct DataCharacter: Codable {
     let count: Int
     var next: String?
     let previous: String?
     var results: Array<Character>
 }
+
